@@ -14,9 +14,10 @@
     3. Run training 
 
 ## Evaluate a model (mae, mape)
-* Modify model_path 
+* Training will save best model ckpt in ```base_path/alpaca/YYYYMMDD-HHMMSS``` folder 
+* Modify model_path to ```./alpaca/YYYYMMDD-HHMMSS```
 * ```python evaluate.py```
 
 ## Rendering an image with saved model
-* Modify model_path
+* Modify model_path to ```./alpaca/YYYYMMDD-HHMMSS```
 * ```python render_one_image.py```
