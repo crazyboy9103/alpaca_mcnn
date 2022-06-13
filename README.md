@@ -13,6 +13,9 @@
     2. extract and resize gt density maps to gt_target_size and save them as train_pkl_file, valid_pkl_file
     3. Run training 
 
+## Monitor with Tensorboard
+* ```tensorboard --logdir base_path/alpaca/YYYYMMDD-HHMMSS --bind_all```
+
 ## Evaluate a model (mae, mape)
 * Training will save best model ckpt in ```base_path/alpaca/YYYYMMDD-HHMMSS``` folder 
 * Modify model_path to ```./alpaca/YYYYMMDD-HHMMSS```
