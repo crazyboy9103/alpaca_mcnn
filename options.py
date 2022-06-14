@@ -21,16 +21,16 @@ def get_args():
         "/home/aiot/alpaca/alpaca_crowd/", 
         "train_images", 
         "val_images", 
-        "preprocessed_train_336", 
-        "preprocessed_valid_336", 
+        "preprocessed_train", 
+        "preprocessed_valid", 
         336, 
         "annotation_train.odgt", 
         "annotation_val.odgt",
-        "train_gt_84.pkl", 
-        "valid_gt_84.pkl",
+        "train_gt_density_maps_84x84_cleaned.pkl", 
+        "valid_gt_density_maps_84x84_cleaned.pkl",
         84, 
-        "../tf/alpaca/20220608-135816"
-        1,
+        "../tf/alpaca/20220608-135816",
+        0,
     ]
 
     for opt, default in zip(opts, defaults):
