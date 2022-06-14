@@ -1,10 +1,8 @@
 import tensorflow as tf
 from train_utils import *
-import argparse
+from options import get_args
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--multi_gpu", default=0, type=int)
-    args = parser.parse_args()
+    args = get_args()
 
     base_path = args.base_path
     processed_train_folder = os.path.join(base_path, "preprocessed_train_gray") # Resize 된 이미지 폴더
