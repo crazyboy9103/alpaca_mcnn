@@ -18,7 +18,7 @@ if __name__ == "__main__":
             trainer.train(epochs=100, batch_size=32)
             trainer.evaluate()
     else:
-        with tf.device("/GPU:0")
-        trainer = CrowdHumanTrainer(processed_train_folder, processed_valid_folder, train_density_maps_pkl, valid_density_maps_pkl)
-        trainer.train(epochs=100, batch_size=32)
-        trainer.evaluate()
+        with tf.device("/GPU:0"):
+            trainer = CrowdHumanTrainer(processed_train_folder, processed_valid_folder, train_density_maps_pkl, valid_density_maps_pkl)
+            trainer.train(epochs=100, batch_size=32)
+            trainer.evaluate()

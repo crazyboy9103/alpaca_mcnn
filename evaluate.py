@@ -50,30 +50,13 @@ def compute_stats(loaded_model, valid_generator):
     mape /= len(valid_generator)
     adj_mae /= len(valid_generator)
     adj_mape /= len(valid_generator)
+    
     print(f"""
         mae      : {mae}
         mape     : {mape}
         adj_mae  : {adj_mae}
         adj_mape : {adj_mape}
     """)
-    
-    # data_to_plot = [
-    #     [],
-    #     [],
-    #     []
-    # ]
-    # for image_path, gt_num in gt_nums.items():
-    #     data_to_plot[0].append(gt_num)
-    #     data_to_plot[1].append(mapes[image_path])
-    #     data_to_plot[2].append(adj_mapes[image_path])
-    
-    # plt.figure(1)
-    # plt.scatter(data_to_plot[0], data_to_plot[1], label="mape")
-    # plt.scatter(data_to_plot[0], data_to_plot[2], label="adj_mape")
-    # plt.legend()
-    # plt.xlabel("gt_num")
-    # plt.ylabel("mape (fraction)")
-    # plt.savefig("eval.png", dpi=300)
     
 if __name__ == "__main__":
     os.environ['CUDA_VISIBLE_DEVICES'] = '-1'

@@ -19,11 +19,9 @@ class CrowdHumanDataGenerator(Sequence):
     def __getitem__(self, idx):
         batch_x = self.image_paths[idx * self.batch_size : (idx + 1) * self.batch_size]
         batch_y = self.image_ids[idx * self.batch_size : (idx + 1) * self.batch_size]
-        
-        
+
         imgs = np.array([img_to_array(load_img(img_path)) for img_path in batch_x])
         labels = np.array([self.gt_density_maps[img_id] for img_id in batch_y])
-        #print(imgs.shape, labels.shape)
         return imgs / 255.0, labels.astype(np.float32)
 
 import math
@@ -32,9 +30,6 @@ from keras import backend as K
 
 
 class CosineAnnealingScheduler(Callback):
-    """Cosine annealing scheduler.
-    """
-
     def __init__(self, T_max, eta_max, eta_min=0, verbose=0):
         super(CosineAnnealingScheduler, self).__init__()
         self.T_max = T_max

@@ -17,11 +17,7 @@ if __name__ == "__main__":
 
     valid_generator = CrowdHumanDataGenerator(processed_valid_folder, load_gt_density_maps(valid_density_maps_pkl), 1)
     model_path = args.model_path
-    # log_path = "./alpaca"
-    # paths = [path for path in os.listdir(log_path) if "-" in path]
-    # paths = sorted(paths)
 
-    # log_path = os.path.join(log_path, paths[-1])
     print(f"Evaluating {model_path}")
     loaded_model = tf.keras.models.load_model(model_path)
 
